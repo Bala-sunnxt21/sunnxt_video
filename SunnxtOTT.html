@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="description" content="Developing the sun nxt platform in web">
+    <meta name="author" content="Balakumaran">
+    <meta name="keywords" content="sunnxt">
+    <meta http-equiv="refresh" content="360">
+    <title>Sunnxt</title>
+    <link rel="icon" href="img/sunnxticon.png">
+    <link rel="stylesheet" href="sunnextStyles.css">
+
+</head>
+
+<body onload="loadImage()">
+    <header class="header">
+        <img class="icon1" src="img/sunnxticon.png" alt="sunnxt icon">
+        <nav class="titles">
+            <ul class="header-details">
+
+                <li> <a href="#1" class="home">HOME</a></li>
+                <li> <a href="#2" class="movies">MOVIES</a></li>
+                <li> <a href="#3" class="tvshows">TV SHOWS</a></li>
+                <li> <a href="#4" class="livetv">LIVE TV</a></li>
+                <li> <a href="#5" class="musicvideos">MUSIC VIDEOS</a></li>
+                <li> <a href="#6" class="comedy">COMEDY</a>
+            </ul>
+        </nav>
+        <button class="button">
+            <img class="icon2" src="/img/language_icon.png">
+            <p class="lang">Language
+            <p>
+                <img class="icon3" src="/img/caret-down.png">
+        </button>
+
+        <img class="search" src="/img/search.svg">
+        <button class="subscribe">Subscribe</button>
+        <img src="/img/profile.png" alt="profile" class="profile">
+
+    </header>
+    <main class="main" hidden>
+        <div class="carouselSet">
+            <img name="slide" alt="having issue" class="imgLoading" src="">
+            <img name="slide1" alt="having issue" class="imgLoading" src="">
+            <img name="slide2" alt="having issue" class="imgLoading" src="">
+        </div>
+        <div style="text-align:center">
+            <span class="dot" id="dot1"></span>
+            <span class="dot" id="dot2"></span>
+            <span class="dot" id="dot3"></span>
+            <span class="dot" id="dot4"></span>
+            <span class="dot" id="dot5"></span>
+        </div>
+    </main>
+    <main class="playingVideo">
+<div class="videosInfopage">
+    <div class="firstContent">
+        <div class="pageleft">
+           <div class="firstline">
+            <img src="/img/back_arrow_left1.svg" alt="left_arrow" class="leftArrow">
+            <p class="titleinfo">Rudhran Trailer</p>
+           </div>
+           <ul class="genric">
+            <li class="info1">Tamil</li>
+            <li class="info1">Action</li>
+            <li class="info1">2023</li>
+            <li class="info1">3 Mins</li>
+           </ul>
+           <ul class="genric1">
+              <li class="gne1">SUB</li>
+              <li class="gne1">4k</li>
+           </ul>
+           <div>
+            <p class="movieInfo">Presenting the official trailor from the most anticipated action movie "RUDHRAN"</p>
+           </div>
+           <button class="playingvideo" id="stop">Play</button>
+           <div class="watchlist">
+            <img src="/img/watchlist.png" alt="watchlist" class="watchimg">
+            <p>Watchlist</p>
+            <p class="line1"></p>
+           
+            <img src="/img/share.png" alt="share" class="shareimg">
+            <p>Share</p>
+
+           </div>
+        </div>
+        <div class="pageRight">
+         <img src="/img/rudhran.jpg" alt="trailer img" class="trailer" id="hideimage">
+         <iframe class="playvideo" id="played" width="640" height="335" src="https://www.youtube.com/embed/z-swatm6I8I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+    </main>
+    <script>
+        function loadImage() {
+            images[0] = "/img/poke1.jfif";
+            images[1] = "/img/poke2.jfif";
+            images[4] = "/img/poke5.jfif";
+
+            var imgView = document.slide;
+            var imgView1 = document.slide1;
+            var imgView2 = document.slide2;
+            imgView.src = images[4];
+            imgView1.src = images[0];
+            imgView2.src = images[1];
+            imgView.style.marginTop = "25px";
+            imgView1.style.height = "360px";
+            imgView2.style.marginTop = "25px";
+            document.getElementById("dot1").style.backgroundColor = "gray";
+            document.getElementById("dot2").style.backgroundColor = "transparent";
+            document.getElementById("dot3").style.backgroundColor = "transparent";
+            document.getElementById("dot4").style.backgroundColor = "transparent";
+            document.getElementById("dot5").style.backgroundColor = "transparent";
+        }
+    </script>
+    <script src="/sunnxt.js"></script>
+    <script src="/play.js"></script>
+</body>
+
+</html>
